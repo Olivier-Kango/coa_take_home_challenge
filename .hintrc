@@ -10,9 +10,7 @@
   "hints": {
     "button-type": "default",
     "disown-opener": "default",
-    "html-checker": "off",
     "meta-charset-utf-8": "default",
     "meta-viewport": "default",
-    "no-inline-styles": "error"
   }
 }
