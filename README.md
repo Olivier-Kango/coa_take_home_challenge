@@ -5,7 +5,7 @@
   <img src="https://github.com/Olivier-Kango/coa_take_home_challenge/assets/108806646/2ff56336-2175-46a4-a497-d6997cd06808" alt="coa-logo-outline" width="140"  height="auto" />
   <br/>
 
- <h3><b>TAKE HOME CHALLENGE README</b></h3>
+ <h3><b>TAKE HOME CHALLENGE</b></h3>
   <h3>Interactive Photo Gallery</h3>
 
 </div>
