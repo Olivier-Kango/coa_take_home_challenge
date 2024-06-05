@@ -37,7 +37,7 @@
 
 # 📖 Interactive Photo Gallery <a id="about-project"></a>
 
->  This challenge assesses my skills in HTML, CSS, and JavaScript, as well as my problem-solving abilities. I will build an interactive photo gallery based on provided [Figma designs](https://www.figma.com/design/XF6xlvvHBv12WFveDjVoso/COA-Take-home-Challenge?node-id=0-1&t=Vf51V3iQYoBTI2G3-0) and complete two JavaScript coding challenges to test my logical thinking and coding aptitude. This challenge is part of my application process at Code of Africa (<a href="https://www.codeofafrica.com/EN" target="_blank">CoA</a>).
+>  This challenge assesses my skills in HTML, CSS, and JavaScript, as well as my problem-solving abilities. I will build an interactive photo gallery based on provided [Figma designs](https://www.figma.com/design/XF6xlvvHBv12WFveDjVoso/COA-Take-home-Challenge?node-id=0-1&t=Vf51V3iQYoBTI2G3-0) and complete two JavaScript coding challenges to test my logical thinking and coding aptitude. This challenge is part of my application process at Code of Africa ([CoA](https://www.codeofafrica.com/EN)).
 
 **Interactive Photo Gallery** allows the user to view, navigate, and interact with a collection of photos dynamically. Users can click on thumbnails to see larger versions, navigate through photos using next/previous buttons, and possibly apply filters or sort options to the gallery.
 
