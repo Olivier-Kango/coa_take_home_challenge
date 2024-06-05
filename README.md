@@ -65,16 +65,20 @@ Please click on the video below 👇 for more explanation
 <!-- Features -->
 
 ### Key Features <a id="key-features"></a>
-
+- **Responsive Design**: Ensure the interactive photo gallery adapt seamlessly to different screen sizes and devices.
+- **Figma Design Accuracy**: Match the provided [Figma designs](https://www.figma.com/design/XF6xlvvHBv12WFveDjVoso/COA-Take-home-Challenge?node-id=0-1&t=8hgCEsmItqIAH48g-0) pixel-perfectly, including layout, spacing, typography, and visual styles.
+- **Hover Interaction**: Implement the hover interaction as shown in the Figma prototype, displaying additional details when a user hovers over a photo.
+- **Cross-browser Compatibility**: Ensure consistent performance across modern web browsers, such as Chrome, Firefox, Safari, and Edge.
 - **Thumbnail View :** Display a grid of photo thumbnails.
 - **Photo Enlargement :** Click on a thumbnail to view a larger version of the photo.
 - **Navigation Controls :** Include next and previous buttons to navigate through photos.
 - **Slideshow Mode :** Allow users to view photos in a slideshow with automatic transitions.
-- **Responsive Design :** Ensure the gallery is fully responsive and works well on different devices and screen sizes.
 - **Keyboard Navigation :** Enable navigation using keyboard arrows.
 - **Loading Indicators :** Show loading animations or placeholders while photos are being loaded.
 - **Download Option :** Allow users to download high-resolution versions of the photos.
 - **Photo Information :** Display additional information about the photo, such as title, description, and date taken.
+- **Code Quality**: Write clean, readable, and well-structured code, following best practices and coding conventions for HTML, CSS, and JavaScript.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
