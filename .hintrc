@@ -13,10 +13,6 @@
     "html-checker",
     "meta-charset-utf-8",
     "meta-viewport",
-    {
-      "name": "no-inline-styles",
-      "severity": "error",
-      "options": { "exclude": ["Unexpected token '?'"] }
-    }
+    "no-inline-styles:error"
   ]
 }
