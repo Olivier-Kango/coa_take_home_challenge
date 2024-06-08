@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     imageContainer.appendChild(image.cloneNode(true));
     imageContainer.appendChild(imageText);
 
+    const knowMore = document.createElement('p');
+    knowMore.classList.add('more-info');
+    imageContainer.appendChild(knowMore);
+    knowMore.textContent = 'more-info';
+
     imgGallery.replaceChild(imageContainer, image);
   });
 
