@@ -67,6 +67,7 @@ body {
 
   .img-gallery img {
     width: auto;
+    transform: translateX(-35%);
     max-height: 100vh;
     margin: 0;
   }
