@@ -176,3 +176,22 @@
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+
+@media screen and (max-width: 768px) {
+  .imageWrapper span.prev,
+  .imageWrapper span.next {
+    display: none;
+  }
+
+  .imageWrapper {
+    background: red;
+    padding: 0;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+  }
+}
