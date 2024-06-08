@@ -10,7 +10,7 @@ function openModal(pic) {
 
 images.forEach((img, index) => {
   img.addEventListener('click', () => {
-    openModal(`images/img${index}.jpg`);
+    openModal(`images/image${index}.png`);
   });
 });
 
