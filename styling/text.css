@@ -1,12 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/d-din');
 
 /* Text */
-.image-container {
-  position: relative;
-  display: inline-block;
-  transition: 0.8s ease;
-}
-
 .image-text {
   position: absolute;
   display: flex;
@@ -36,9 +30,4 @@
   line-height: 16.02px;
   text-transform: capitalize;
   opacity: 70%;
-}
-
-.image-container:hover {
-  filter: brightness(0);
-  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
