@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #ecf4fb;
+  background: black;
 }
 
 .img-gallery {
@@ -19,17 +19,12 @@ body {
 .img-gallery img {
   width: 100%;
   cursor: pointer;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .imageWrapper img {
   width: 90%;
   max-width: 500px;
-}
-
-.img-gallery img:hover {
-  transform: scale(0.8);
-  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
 
 /* Wrapper */
@@ -46,12 +41,168 @@ body {
   z-index: 100;
 }
 
-.imageWrapper span {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-size: 30px;
-  font-family: sans-serif;
+.imageWrapper span.close, .imageWrapper span.nav {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.imageWrapper span.close:hover, .imageWrapper span.nav:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.imageWrapper span.close, .imageWrapper span.nav {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.imageWrapper span.close:hover, .imageWrapper span.nav:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.imageWrapper span.close, .imageWrapper span.nav {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
   color: #fff;
+  background: #111;
   cursor: pointer;
+  position: absolute;
+  z-index: 101;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper span.nav:before, .imageWrapper span.close:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 50%;
+}
+
+.imageWrapper span.nav:hover:before, .imageWrapper span.close:hover:before {
+  opacity: 1;
+}
+
+.imageWrapper span.close:active {
+  color: #000;
+}
+
+.imageWrapper span.close:active:after {
+  background: transparent;
+}
+
+.imageWrapper span.close, .imageWrapper span.nav {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: absolute;
+  z-index: 101;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper span.nav:before, .imageWrapper span.close:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 50%;
+}
+
+.imageWrapper span.nav:hover:before, .imageWrapper span.close:hover:before {
+  opacity: 1;
+}
+
+.imageWrapper span.close:after, .imageWrapper span.nav:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+.imageWrapper span.close:active, .imageWrapper span.nav:active {
+  color: #000;
+}
+
+.imageWrapper span.close:active:after, .imageWrapper span.nav:active:after {
+  background: transparent;
+}
+
+.imageWrapper span.close {
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.fa-times-thin:before {
+	content: '\00d7';
+}
+
+.imageWrapper span.nav {
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  top: 50%;
+  user-select: none;
+}
+
+.imageWrapper span.prev {
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+.imageWrapper span.next {
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.img-gallery img:hover {
+  filter: brightness(0.6);
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }

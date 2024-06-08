@@ -1,25 +1,29 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Gallery</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- code for JavaScript -->
-    <div class="imageWrapper" id="wrapper">
-      <img src="images/image1.png" id="fullImg" />
-      <span>X</span>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+<body>
+  <div class="imageWrapper" id="wrapper">
+    <img src="" id="fullImg" />
+    <span class="close"><i class="fa fa-times-thin fa-2x"></i></span>
+    <span class="nav prev"><i class="fa fa-angle-left"></i></span>
+    <span class="nav next"><i class="fa fa-angle-right"></i></span>
+  </div>
 
-    <div class="img-gallery">
-      <img src="images/image1.png" />
-      <img src="images/image2.png" />
-      <img src="images/image3.png" />
-      <img src="images/image4.png" />
-    </div>
+  <div class="img-gallery">
+    <img src="images/image1.png" />
+    <img src="images/image2.png" />
+    <img src="images/image3.png" />
+    <img src="images/image4.png" />
+  </div>
 
-    <script src="app.js"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>
