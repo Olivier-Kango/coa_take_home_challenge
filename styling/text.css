@@ -60,3 +60,9 @@
 .image-container:hover .image-text {
   bottom: 50px;
 }
+
+@media screen and (max-width: 400px) {
+  .image-text {
+    display: none;
+  }
+}

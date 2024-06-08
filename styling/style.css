@@ -56,3 +56,30 @@ body {
   transition: all 0.4s ease;
   z-index: -1;
 }
+
+@media screen and (max-width: 400px) {
+  .img-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .img-gallery img {
+    width: auto;
+    max-height: 100vh;
+    margin: 0;
+  }
+
+  .img-gallery::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+  }
+}
+
