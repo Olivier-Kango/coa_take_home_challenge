@@ -18,7 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     imageText.classList.add('image-text');
 
     const title = document.createElement('h2');
-    title.textContent = text.title;
+    const titleWords = text.title.split(' ');
+    if (titleWords.length > 1) {
+      const firstLine = titleWords.slice(0, -1).join(' ');
+      const secondLine = titleWords.slice(-1)[0];
+      title.innerHTML = `${firstLine}<br>${secondLine}`;
+    } else {
+      title.textContent = text.title;
+    }
 
     const country = document.createElement('p');
     country.textContent = text.country;
@@ -30,15 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     imageContainer.appendChild(imageText);
 
     imgGallery.replaceChild(imageContainer, image);
-  });
-
-  const h2Elements = document.querySelectorAll('.image-text h2');
-  h2Elements.forEach((h2) => {
-    const words = h2.textContent.split(' ');
-    if (words.length > 1) {
-      const lastWord = words.pop();
-      h2.innerHTML = `${words.join(' ')} <span class="last-word">${lastWord}</span>`;
-    }
   });
 
   // Dispatch a custom event to signal that the new images have been created
