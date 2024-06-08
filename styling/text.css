@@ -1,0 +1,44 @@
+@import url('https://fonts.cdnfonts.com/css/d-din');
+
+/* Text */
+.image-container {
+  position: relative;
+  display: inline-block;
+  transition: 0.8s ease;
+}
+
+.image-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 213px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 5px;
+}
+
+.image-text h2 {
+  font-family: 'D-DIN Condensed', sans-serif;
+  font-weight: 500;
+  margin: 0;
+  font-size: 32px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.image-text p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16.02px;
+  text-transform: capitalize;
+  opacity: 70%;
+}
+
+.image-container:hover {
+  filter: brightness(0);
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}

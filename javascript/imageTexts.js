@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const imageTexts = [
-    { title: 'Title 1', country: 'Country 1' },
-    { title: 'Title 2', country: 'Country 2' },
-    { title: 'Title 3', country: 'Country 3' },
-    { title: 'Title 4', country: 'Country 4' },
+    { title: 'Fennec Fox', country: 'India' },
+    { title: 'Humpback Whale', country: 'South Africa' },
+    { title: 'Common Brown Baboon', country: 'South Africa' },
+    { title: 'Spotted Deer', country: 'Amazon' },
   ];
 
   const imgGallery = document.querySelector('.img-gallery');
@@ -31,4 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     imgGallery.replaceChild(imageContainer, image);
   });
+
+  const h2Elements = document.querySelectorAll('.image-text h2');
+  h2Elements.forEach((h2) => {
+    const words = h2.textContent.split(' ');
+    if (words.length > 1) {
+      const lastWord = words.pop();
+      h2.innerHTML = `${words.join(' ')} <span class="last-word">${lastWord}</span>`;
+    }
+  });
+
+  // Dispatch a custom event to signal that the new images have been created
+  document.dispatchEvent(new Event('imagesUpdated'));
 });
