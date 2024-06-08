@@ -27,3 +27,28 @@ body {
   filter: brightness(0.4);
   box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
+
+/* Text */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.image-text h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.image-text p {
+  margin: 0;
+  font-size: 1em;
+}
