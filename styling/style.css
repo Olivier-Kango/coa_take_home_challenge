@@ -65,6 +65,10 @@ body {
 
 /* Media query for screens up to 768px width */
 @media screen and (max-width: 768px) {
+  .image-container {
+    height: 800px;
+  }
+
   .img-gallery {
     grid-template-columns: repeat(4, 1fr); /* Display 4 columns on smaller screens */
     overflow-x: scroll; /* Add horizontal scrolling */
@@ -75,8 +79,8 @@ body {
 
   .img-gallery img {
     width: auto; /* Auto width for images */
-    transform: translateX(-35%); /* Move images to the left by 35% of their width */
-    height: 100vh; /* Set image height to fill viewport height */
+    transform: translateX(-42%); /* Move images to the left by 35% of their width */
+    height: 100%; /* Set image height to fill viewport height */
     margin: 0; /* Remove margin */
   }
 
