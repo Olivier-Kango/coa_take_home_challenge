@@ -28,6 +28,7 @@
   - [Deployment](#deployment)
 - [👥 Author](#authors)
 - [🔭 Future Features](#future-features)
+- [📝 Challenges](#challenges)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -180,6 +181,61 @@ To deploy this project I used :
 - **Accessibility Features :** Ensure the gallery is accessible to users with disabilities, including proper use of ARIA roles and keyboard navigability.
 - **Search Functionality :** Enable a search bar to find specific photos by keywords.
 - **Lazy Loading :** Implement lazy loading for images to improve performance and load times.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CHALLANGES -->
+
+## 📝 Challenges <a id="challenges"></a>
+
+### Coding Challenge 1: Array Manipulation
+
+**Problem Statement: :** Given an array of integers and a target sum, determine if there exists a contiguous
+subarray within the array that sums up to the target. Return true if such a subarray exists,
+otherwise return false.
+
+**Example:**
+**Input:** arr = [4, 2, 7, 1, 9, 5], target = 17
+**Output:** true
+**Explanation:** The subarray [7, 1, 9] sums up to 17, which is equal to the target.
+**Expected Time Complexity:** O(n), where n is the length of the array.
+**Expected Space Complexity:** O(1).
+
+
+### Coding Challenge 2: String Transformation
+
+Here's the updated problem statement with real-world word examples:
+
+**Problem Statement:** Here's the updated problem statement with real-world word examples:
+- If the length of the string is divisible by 3, reverse the entire string.
+- If the length of the string is divisible by 5, replace each character with its ASCII code.
+- If the length of the string is divisible by both 3 and 5 (i.e., divisible by 15), perform
+both operations in the order specified above.
+
+**Example Input:** "Hamburger"
+**Output:** "regrubmaH"
+**Explanation:** The length of the string is 9, which is divisible by 3 but not by 5 or 15.
+Therefore, the string is reversed, resulting in "regrubmaH".
+
+**Example Input:** "Chocolate Chip Cookie"
+**Output:** "eikooCpihCetalocohC"
+**Explanation:** The length of the string is 21, which is divisible by 3 but not by 5 or 15.
+Therefore, the string is reversed, resulting in "eikooCpihCetalocohC".
+
+**Example Input:** 
+● The string will only contain alphanumeric characters and spaces.
+● The length of the string will be between 1 and 1000.
+**Expected Time Complexity:** O(n), where n is the length of the string.
+**Expected Space Complexity:** O(n), where n is the length of the string.
+
+**Note:** You can assume that the input will always be valid and within the specified
+constraints. Your solution should handle all possible cases and return the transformed
+string accordingly.
+
+These examples use real-world words related to food to illustrate the transformations
+applied based on the divisibility of the string length by 3, 5, and 15.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
