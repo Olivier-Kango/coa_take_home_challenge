@@ -71,8 +71,6 @@ body {
 
   .img-gallery {
     grid-template-columns: repeat(4, 1fr); /* Display 4 columns on smaller screens */
-    overflow-x: scroll; /* Add horizontal scrolling */
-    overflow-y: auto; /* Add vertical scrolling */
     white-space: nowrap; /* Prevent line breaks */
     margin: 0; /* Remove margin */
   }
