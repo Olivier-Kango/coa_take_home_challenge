@@ -1,6 +1,7 @@
+/* Import D-DIN font */
 @import url('https://fonts.cdnfonts.com/css/d-din');
 
-/* Text */
+/* Text styling */
 .image-text {
   position: absolute;
   display: flex;
@@ -13,60 +14,66 @@
   color: white;
   padding: 5px;
   min-height: 40px;
-  z-index: 1;
-  transition: bottom 0.4s ease;
+  z-index: 1; /* Ensure text appears above images */
+  transition: bottom 0.4s ease; /* Smooth transition for bottom position */
 }
 
+/* Styling for image titles */
 .image-text h2 {
-  font-family: 'D-DIN Condensed', sans-serif;
+  font-family: 'D-DIN Condensed', sans-serif; /* Use D-DIN Condensed font */
   font-weight: 500;
   margin: 0;
   font-size: 32px;
   line-height: 32px;
   text-transform: uppercase;
-  white-space: pre-wrap;
+  white-space: pre-wrap; /* Allow wrapping of long titles */
 }
 
+/* Styling for image descriptions */
 .image-text p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
   font-weight: 400;
   font-size: 11px;
   line-height: 16.02px;
-  text-transform: capitalize;
-  opacity: 70%;
+  text-transform: capitalize; /* Capitalize text */
+  opacity: 70%; /* Set opacity */
 }
 
+/* Styling for "Know more" text */
 .image-container::after {
-  content: 'Know more \2192';
-  font-family: 'Poppins', sans-serif;
+  content: 'Know more \2192'; /* Unicode arrow character */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
   font-size: 13px;
   font-weight: 400;
   position: absolute;
-  left: 75px;
+  left: 75px; /* Position relative to image */
   transform: translateX(-50%);
-  color: rgb(0, 217, 255);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-  z-index: 1;
+  color: rgb(0, 217, 255); /* Text color */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.4s ease; /* Smooth transition for opacity */
+  pointer-events: none; /* Make non-clickable */
+  z-index: 1; /* Ensure text appears above images */
 }
 
+/* Show "Know more" text on hover */
 .image-container:hover::after {
-  opacity: 1;
-  background: none;
-  bottom: 30px;
+  opacity: 1; /* Make visible */
+  background: none; /* Remove background */
+  bottom: 30px; /* Adjust position */
 }
 
+/* Show image text on hover */
 .image-container:hover .image-text {
-  bottom: 50px;
+  bottom: 50px; /* Adjust position */
 }
 
+/* Media query for screens up to 768px width */
 @media screen and (max-width: 768px) {
   .image-text {
-    display: none;
+    display: none; /* Hide image text on smaller screens */
   }
 
   .image-container::after {
-    content: '';
+    content: ''; /* Remove "Know more" text */
   }
 }

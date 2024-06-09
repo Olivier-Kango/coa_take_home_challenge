@@ -1,147 +1,161 @@
+/* Styling for the image wrapper */
 .imageWrapper {
   width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  position: fixed;
+  height: 100vh; /* Full viewport height */
+  background: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+  position: fixed; /* Fixed position to cover the viewport */
   top: 0;
   left: 0;
-  display: none;
+  display: none; /* Initially hidden */
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 100; /* Ensure it appears above other content */
 }
 
+/* Styling for the image within the wrapper */
 .imageWrapper img {
-  width: 90%;
-  max-width: 500px;
+  width: 90%; /* 90% of the wrapper's width */
+  max-width: 500px; /* Maximum width for larger screens */
 }
 
-.imageWrapper span.nav, .imageWrapper span.close {
-  width: 50px;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: absolute;
-  z-index: 101;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  transition: background-color 0.3s, border-color 0.3s;
-  font-size: 20px;
-  font-family: 'Arial', sans-serif;
-  top: 50%;
-  user-select: none;
-}
-
+/* Styling for navigation buttons and close button */
+.imageWrapper span.nav,
 .imageWrapper span.close {
   width: 50px;
   height: 50px;
   border: none;
   outline: none;
   color: #fff;
+  background: #111;
   cursor: pointer;
   position: absolute;
-  z-index: 101;
+  z-index: 101; /* Ensure it appears above the image */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
   padding: 10px;
-  top: 20px;
-  right: 20px;
+  transition: background-color 0.3s, border-color 0.3s;
   font-size: 20px;
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s, border-color 0.3s;
+  top: 50%; /* Vertically centered */
+  user-select: none; /* Prevent text selection */
 }
 
-.imageWrapper span.nav::before, .imageWrapper span.close::before {
+/* Styling for the close button */
+.imageWrapper span.close {
+  top: 20px; /* Adjust position */
+  right: 20px; /* Adjust position */
+}
+
+/* Styling for the glowing effect before navigation buttons */
+.imageWrapper span.nav::before,
+.imageWrapper span.close::before {
   content: '';
-  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
+  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00); /* Gradient colors */
   position: absolute;
   top: -2px;
   left: -2px;
-  background-size: 400%;
+  background-size: 400%; /* Background size */
   z-index: -1;
-  filter: blur(5px);
+  filter: blur(5px); /* Blur effect */
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
+  animation: glowing 20s linear infinite; /* Glowing animation */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular shape */
 }
 
-.imageWrapper span.nav::after, .imageWrapper span.close::after {
+/* Styling for the background of navigation buttons */
+.imageWrapper span.nav::after,
+.imageWrapper span.close::after {
   z-index: -1;
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: #111; /* Background color */
   left: 0;
   top: 0;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular shape */
 }
 
-.imageWrapper span.nav:active::after, .imageWrapper span.close:active::after {
-  /* background: transparent; */
-  background-color: rgba(0, 0, 0, 0.58);
+/* Styling for the background color when buttons are active */
+.imageWrapper span.nav:active::after,
+.imageWrapper span.close:active::after {
+  background-color: rgba(0, 0, 0, 0.58); /* Semi-transparent black */
 }
 
+/* Styling for the close button icon */
 .fa-times-thin::before {
-  content: '\00d7';
+  content: '\00d7'; /* Unicode symbol for "x" */
 }
 
+/* Styling for the navigation buttons */
 .imageWrapper span.prev {
-  left: 20px;
-  transform: translateY(-50%);
-  font-size: 24px;
+  left: 20px; /* Adjust position */
+  transform: translateY(-50%); /* Center vertically */
+  font-size: 24px; /* Font size */
 }
 
 .imageWrapper span.next {
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 24px;
+  right: 20px; /* Adjust position */
+  transform: translateY(-50%); /* Center vertically */
+  font-size: 24px; /* Font size */
 }
 
+/* Styling for hover effect on navigation buttons */
 .imageWrapper span.close:hover,
 .imageWrapper span.nav:hover {
   background: black;
-  background-color: rgba(255, 255, 255, 0.185);
-  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.185); /* Semi-transparent white background */
+  border-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
 }
 
+/* Styling for glowing effect on hover */
 .imageWrapper span.nav:hover::before,
 .imageWrapper span.close:hover::before {
-  opacity: 1;
+  opacity: 1; /* Make the glow visible */
 }
 
+/* Glowing animation */
 @keyframes glowing {
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
 
+/* Media query for screens up to 768px width */
 @media screen and (max-width: 768px) {
-  .imageWrapper span.nav::after, .imageWrapper span.close::after {
-    background: transparent;
+  .imageWrapper span.nav::after,
+  .imageWrapper span.close::after {
+    background: transparent; /* Transparent background */
   }
 
   .imageWrapper {
-    background: black;
-    padding: 0;
+    background: black; /* Black background */
+    padding: 0; /* Remove padding */
   }
 
   .imageWrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin: 0; /* Remove margin */
+  }
+
+  .imageWrapper span.close {
+    background: none; /* Remove background */
+    background-color: transparent; /* Transparent background */
+  }
+
+  /* Styling for the glowing effect on navigation buttons */
+  .imageWrapper span.nav::before,
+  .imageWrapper span.close::before {
+    background: #111; /* Background color */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
   }
 }

@@ -1,75 +1,83 @@
+/* Reset default margin, padding, and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Set background color of the body to black */
 body {
   background: black;
   margin: 0;
 }
 
+/* Style for each image container */
 .image-container {
   margin: 0;
   padding: 0;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  transition: 0.8s ease;
-  height: 502px;
+  transition: 0.8s ease; /* Smooth transition effect */
+  height: 502px; /* Set a fixed height for the image container */
 }
 
+/* Style for the image gallery */
 .img-gallery {
-  margin: 50px;
+  margin: 50px; /* Add some margin around the image gallery */
   display: grid;
   gap: 0;
   padding: 0;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0));
-  transition: 0.4s ease;
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0)); /* Responsive grid layout */
+  transition: 0.4s ease; /* Smooth transition effect */
+  justify-content: center; /* Center align images horizontally */
+  align-items: center; /* Center align images vertically */
 }
 
+/* Style for the images within the gallery */
 .img-gallery img {
-  width: 100%;
-  margin: 0;
-  cursor: pointer;
-  transition: 0.4s ease;
+  width: 100%; /* Make images fill their container */
+  margin: 0; /* Remove default margin */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: 0.4s ease; /* Smooth transition effect */
 }
 
+/* Style for the overlay gradient effect */
 .img-gallery::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 500px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  pointer-events: none;
+  height: 500px; /* Set a fixed height for the overlay */
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Create gradient effect */
+  pointer-events: none; /* Make overlay non-interactive */
 }
 
+/* Hover effect for images */
 .img-gallery img:hover {
-  filter: brightness(0.35) blur(4px);
-  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-  transform: scale(1.1);
-  transition: all 0.4s ease;
-  z-index: -1;
+  filter: brightness(0.35) blur(4px); /* Adjust brightness and apply blur effect on hover */
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2); /* Add shadow on hover */
+  transform: scale(1.1); /* Scale up image on hover */
+  transition: all 0.4s ease; /* Smooth transition effect for all properties */
+  z-index: -1; /* Set z-index to send image behind other elements */
 }
 
+/* Media query for screens up to 768px width */
 @media screen and (max-width: 768px) {
   .img-gallery {
-    grid-template-columns: repeat(4, 1fr);
-    overflow-x: scroll;
-    overflow-y: auto;
-    white-space: nowrap;
-    margin: 0;
+    grid-template-columns: repeat(4, 1fr); /* Display 4 columns on smaller screens */
+    overflow-x: scroll; /* Add horizontal scrolling */
+    overflow-y: auto; /* Add vertical scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    margin: 0; /* Remove margin */
   }
 
   .img-gallery img {
-    width: auto;
-    transform: translateX(-35%);
-    height: 100vh;
-    margin: 0;
+    width: auto; /* Auto width for images */
+    transform: translateX(-35%); /* Move images to the left by 35% of their width */
+    height: 100vh; /* Set image height to fill viewport height */
+    margin: 0; /* Remove margin */
   }
 
   .img-gallery::after {
@@ -78,8 +86,8 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1400px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    pointer-events: none;
+    height: 500px; /* Set a fixed height for the overlay */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Create gradient effect */
+    pointer-events: none; /* Make overlay non-interactive */
   }
 }
