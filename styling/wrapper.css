@@ -33,6 +33,10 @@
   background-color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   transition: background-color 0.3s, border-color 0.3s;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  top: 50%;
+  user-select: none;
 }
 
 .imageWrapper span.close {
@@ -49,18 +53,16 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.imageWrapper span.close:hover, .imageWrapper span.nav:hover {
-  background: black;
-  background-color: rgba(255, 255, 255, 0.185);
-  border-color: rgba(255, 255, 255, 0.8);
-}
-
-.imageWrapper span.nav:before {
+.imageWrapper span.nav::before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -71,15 +73,15 @@
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-radius: 50%;
 }
 
-.imageWrapper span.nav:hover:before, .imageWrapper span.close:hover:before {
-  opacity: 1;
+.imageWrapper span.nav:active {
+  color: #000;
 }
 
-.imageWrapper span.nav:after {
+.imageWrapper span.nav::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -91,30 +93,12 @@
   border-radius: 50%;
 }
 
-.imageWrapper span.nav:active {
-  color: #000;
-}
-
-.imageWrapper span.nav:active:after {
+.imageWrapper span.nav:active::after {
   background: transparent;
 }
 
-.imageWrapper span.close {
-  top: 20px;
-  right: 20px;
-  font-size: 20px;
-  font-family: 'Arial', sans-serif;
-}
-
-.fa-times-thin:before {
+.fa-times-thin::before {
   content: '\00d7';
-}
-
-.imageWrapper span.nav {
-  font-size: 20px;
-  font-family: 'Arial', sans-serif;
-  top: 50%;
-  user-select: none;
 }
 
 .imageWrapper span.prev {
@@ -127,6 +111,18 @@
   right: 20px;
   transform: translateY(-50%);
   font-size: 24px;
+}
+
+.imageWrapper span.close:hover,
+.imageWrapper span.nav:hover {
+  background: black;
+  background-color: rgba(255, 255, 255, 0.185);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.imageWrapper span.nav:hover::before,
+.imageWrapper span.close:hover::before {
+  opacity: 1;
 }
 
 @keyframes glowing {
