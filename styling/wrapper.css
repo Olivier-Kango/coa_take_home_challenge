@@ -16,7 +16,7 @@
   max-width: 500px;
 }
 
-.imageWrapper span.nav {
+.imageWrapper span.nav, .imageWrapper span.close {
   width: 50px;
   height: 50px;
   border: none;
@@ -60,7 +60,7 @@
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.imageWrapper span.nav::before {
+.imageWrapper span.nav::before, .imageWrapper span.close::before {
   content: '';
   background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
   position: absolute;
@@ -77,11 +77,7 @@
   border-radius: 50%;
 }
 
-.imageWrapper span.nav:active {
-  color: #000;
-}
-
-.imageWrapper span.nav::after {
+.imageWrapper span.nav::after, .imageWrapper span.close::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -93,8 +89,9 @@
   border-radius: 50%;
 }
 
-.imageWrapper span.nav:active::after {
-  background: transparent;
+.imageWrapper span.nav:active::after, .imageWrapper span.close:active::after {
+  /* background: transparent; */
+  background-color: rgba(0, 0, 0, 0.58);
 }
 
 .fa-times-thin::before {
@@ -132,9 +129,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .imageWrapper span.prev,
-  .imageWrapper span.next {
-    display: none;
+  .imageWrapper span.nav::after, .imageWrapper span.close::after {
+    background: transparent;
   }
 
   .imageWrapper {

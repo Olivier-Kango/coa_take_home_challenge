@@ -65,4 +65,8 @@
   .image-text {
     display: none;
   }
+
+  .image-container::after {
+    content: '';
+  }
 }
