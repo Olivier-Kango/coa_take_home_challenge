@@ -28,7 +28,7 @@
   - [Deployment](#deployment)
 - [👥 Author](#authors)
 - [🔭 Future Features](#future-features)
-- [📝 Challenges](#challenges)
+- [📝 CHALLENGES](#challenges)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -185,9 +185,9 @@ To deploy this project I used :
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- CHALLANGES -->
+<!-- CHALLENGES -->
 
-## 📝 Challenges <a id="challenges"></a>
+## 📝 CHALLENGES <a id="challenges"></a>
 
 ### Coding Challenge 1: Array Manipulation
 
