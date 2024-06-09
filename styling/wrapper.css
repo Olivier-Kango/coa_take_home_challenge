@@ -16,46 +16,49 @@
   max-width: 500px;
 }
 
-.imageWrapper span.close, .imageWrapper span.nav {
+.imageWrapper span.nav {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: absolute;
+  z-index: 101;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
   padding: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.imageWrapper span.close:hover, .imageWrapper span.nav:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.imageWrapper span.close, .imageWrapper span.nav {
-  border: 2px solid #fff;
+.imageWrapper span.close {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  z-index: 101;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .imageWrapper span.close:hover, .imageWrapper span.nav:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: black;
+  background-color: rgba(255, 255, 255, 0.185);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
-.imageWrapper span.close, .imageWrapper span.nav {
-  width: 50px;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: absolute;
-  z-index: 101;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imageWrapper span.nav:before, .imageWrapper span.close:before {
+.imageWrapper span.nav:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
@@ -76,52 +79,7 @@
   opacity: 1;
 }
 
-.imageWrapper span.close:active {
-  color: #000;
-}
-
-.imageWrapper span.close:active:after {
-  background: transparent;
-}
-
-.imageWrapper span.close, .imageWrapper span.nav {
-  width: 50px;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: absolute;
-  z-index: 101;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imageWrapper span.nav:before, .imageWrapper span.close:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 50%;
-}
-
-.imageWrapper span.nav:hover:before, .imageWrapper span.close:hover:before {
-  opacity: 1;
-}
-
-.imageWrapper span.close:after, .imageWrapper span.nav:after {
+.imageWrapper span.nav:after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -133,11 +91,11 @@
   border-radius: 50%;
 }
 
-.imageWrapper span.close:active, .imageWrapper span.nav:active {
+.imageWrapper span.nav:active {
   color: #000;
 }
 
-.imageWrapper span.close:active:after, .imageWrapper span.nav:active:after {
+.imageWrapper span.nav:active:after {
   background: transparent;
 }
 
@@ -149,7 +107,7 @@
 }
 
 .fa-times-thin:before {
-	content: '\00d7';
+  content: '\00d7';
 }
 
 .imageWrapper span.nav {
@@ -184,7 +142,7 @@
   }
 
   .imageWrapper {
-    background: red;
+    background: black;
     padding: 0;
   }
 
