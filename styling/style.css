@@ -79,7 +79,7 @@ body {
 
   .img-gallery img {
     width: auto; /* Auto width for images */
-    transform: translateX(-42%); /* Move images to the left by 35% of their width */
+    transform: translateX(-35%); /* Move images to the left by 35% of their width */
     height: 100%; /* Set image height to fill viewport height */
     margin: 0; /* Remove margin */
   }
