@@ -11,14 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentIndex = 0; // Initialize the current index
 
-  // Function to open the modal with a specific index
+  /**
+   * Opens the modal with a specific index
+   * @param {number} index - The index of the image to display in the modal
+   */
   function openModal(index) {
     currentIndex = index; // Set the current index
     wrapper.style.display = 'flex'; // Display the modal
     imgWrapper.src = images[currentIndex].src; // Set the source of the modal image
   }
 
-  // Function to attach event listeners to each image
+  /**
+   * Attach event listeners to each image in the gallery
+   */
   function attachEventListeners() {
     images.forEach((img, index) => {
       img.addEventListener('click', () => {
