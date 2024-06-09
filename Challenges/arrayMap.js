@@ -1,4 +1,3 @@
-// Function to check if there exists a contiguous subarray
 function hasContiguousSubarray(arr, target) {
   let sum = 0;
   let start = 0;
@@ -6,8 +5,8 @@ function hasContiguousSubarray(arr, target) {
   for (let i = 0; i < arr.length; i += 1) {
     sum += arr[i];
 
-    // If sum exceeds target, remove elements from the start until sum <= to target
-    while (sum > target && start < i) {
+    // If sum exceeds target, remove elements from the start until sum <= target
+    while (sum > target && start <= i) {
       sum -= arr[start];
       start += 1;
     }

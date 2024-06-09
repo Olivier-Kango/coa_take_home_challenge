@@ -218,12 +218,17 @@ both operations in the order specified above.
 **Explanation:** The length of the string is 9, which is divisible by 3 but not by 5 or 15.
 Therefore, the string is reversed, resulting in "regrubmaH".
 
+**Example Input:** "Pizza"
+**Output:** "80 105 122 122 97"
+**Explanation:** The length of the string is 5, which is divisible by 5 but not by 3 or 15.
+Therefore, each character is replaced by its ASCII code, resulting in "80 105 122 122 97".
+
 **Example Input:** "Chocolate Chip Cookie"
 **Output:** "eikooCpihCetalocohC"
 **Explanation:** The length of the string is 21, which is divisible by 3 but not by 5 or 15.
 Therefore, the string is reversed, resulting in "eikooCpihCetalocohC".
 
-**Example Input:** 
+**Constraints:** 
 ● The string will only contain alphanumeric characters and spaces.
 ● The length of the string will be between 1 and 1000.
 **Expected Time Complexity:** O(n), where n is the length of the string.
@@ -275,3 +280,4 @@ I would like to thank:
 This project is [MIT](./LICENSE.txt) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
