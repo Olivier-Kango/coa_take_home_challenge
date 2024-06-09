@@ -16,6 +16,7 @@ body {
   display: inline-block;
   overflow: hidden;
   transition: 0.8s ease;
+  height: 502px;
 }
 
 .img-gallery {
@@ -30,20 +31,19 @@ body {
 }
 
 .img-gallery img {
-  filter: brightness(0.8);
   width: 100%;
   margin: 0;
   cursor: pointer;
   transition: 0.4s ease;
 }
 
-.image-container::after {
+.img-gallery::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 250px;
+  height: 500px;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   pointer-events: none;
 }

@@ -42,19 +42,19 @@
   font-size: 13px;
   font-weight: 400;
   position: absolute;
-  top: 90%;
-  left: 103px;
+  left: 75px;
   transform: translateX(-50%);
   color: rgb(0, 217, 255);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .image-container:hover::after {
   opacity: 1;
   background: none;
-  bottom: 0;
+  bottom: 30px;
 }
 
 .image-container:hover .image-text {
