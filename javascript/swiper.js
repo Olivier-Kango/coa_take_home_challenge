@@ -1,91 +1,76 @@
+// Function to find the index of the current image in the gallery
+function findCurrentImageIndex(src) {
+  const images = document.querySelectorAll('.img-gallery img');
+  for (let i = 0; i < images.length; i += 1) {
+    if (src === images[i].src) {
+      return i;
+    }
+  }
+  return -1; // Return -1 if the image is not found
+}
+
 // Function to show the next image in the gallery
 function showNextImage() {
-  // Get the currently active image container
-  const currentImage = document.querySelector('.img-gallery .image-container.active');
-  // Get the next sibling of the current image container
-  const nextImage = currentImage.nextElementSibling;
-  // Check if there is a next image
-  if (nextImage) {
-    // Remove the 'active' class from the current image container
-    currentImage.classList.remove('active');
-    // Add the 'active' class to the next image container
-    nextImage.classList.add('active');
+  const fullImage = document.getElementById('fullImg');
+  const currentIndex = findCurrentImageIndex(fullImage.src);
+  if (currentIndex >= 0) {
+    const images = document.querySelectorAll('.img-gallery img');
+    const nextIndex = (currentIndex + 1) % images.length; // Wrap around to the first image
+    fullImage.src = images[nextIndex].src;
   }
 }
 
 // Function to show the previous image in the gallery
 function showPrevImage() {
-  // Get the currently active image container
-  const currentImage = document.querySelector('.img-gallery .image-container.active');
-  // Get the previous sibling of the current image container
-  const prevImage = currentImage.previousElementSibling;
-  // Check if there is a previous image
-  if (prevImage) {
-    // Remove the 'active' class from the current image container
-    currentImage.classList.remove('active');
-    // Add the 'active' class to the previous image container
-    prevImage.classList.add('active');
+  const fullImage = document.getElementById('fullImg');
+  const currentIndex = findCurrentImageIndex(fullImage.src);
+  if (currentIndex >= 0) {
+    const images = document.querySelectorAll('.img-gallery img');
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    fullImage.src = images[prevIndex].src;
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  let startX = 0; // Initialize startX variable to track initial touch/mouse position
-  let isDragging = false; // Flag to indicate whether dragging/swiping is in progress
+  let startX = 0;
+  let isDragging = false;
 
   // Function to handle touchstart event
   function handleTouchStart(e) {
-    // Get the x-coordinate of the touch position
     startX = e.touches[0].clientX;
-    // Set isDragging flag to true to indicate dragging/swiping has started
     isDragging = true;
   }
 
   // Function to handle touchmove event
   function handleTouchMove(e) {
-    // Exit if dragging/swiping is not in progress
     if (!isDragging) return;
-    // Get the x-coordinate of the current touch position
     const endX = e.touches[0].clientX;
-    // Calculate the horizontal distance dragged/swiped
     const diffX = startX - endX;
-    // If dragged/swiped more than 50 pixels to the left, show the next image
     if (diffX > 50) {
       showNextImage();
-      // Reset isDragging flag to false after the action is performed
       isDragging = false;
     } else if (diffX < -50) {
-      // If dragged/swiped more than 50 pixels to the right, show the previous image
       showPrevImage();
-      // Reset isDragging flag to false after the action is performed
       isDragging = false;
     }
   }
 
   // Function to handle mousedown event
   function handleMouseDown(e) {
-    // Get the x-coordinate of the mouse position
     startX = e.clientX;
-    // Set isDragging flag to true to indicate dragging/swiping has started
     isDragging = true;
   }
 
   // Function to handle mousemove event
   function handleMouseMove(e) {
-    // Exit if dragging/swiping is not in progress
     if (!isDragging) return;
-    // Get the x-coordinate of the current mouse position
     const endX = e.clientX;
-    // Calculate the horizontal distance dragged/swiped
     const diffX = startX - endX;
-    // If dragged/swiped more than 50 pixels to the left, show the next image
     if (diffX > 50) {
       showNextImage();
-      // Reset isDragging flag to false after the action is performed
       isDragging = false;
     } else if (diffX < -50) {
-      // If dragged/swiped more than 50 pixels to the right, show the previous image
       showPrevImage();
-      // Reset isDragging flag to false after the action is performed
       isDragging = false;
     }
   }
@@ -106,4 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isDragging) return;
     e.preventDefault();
   });
+
+  // Initialize the gallery by setting the first image as the full image
+  const images = document.querySelectorAll('.img-gallery img');
+  if (images.length > 0) {
+    document.getElementById('fullImg').src = images[0].src;
+  }
 });
